@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Store</title>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+
+    <!-- Daisy Ui & Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Font Box Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary-color': '#6a9739',
+                'primary-light': '#8bc34a',
+                'bg-color': '#f8f6f3',
+              },
+              fontFamily: {
+                poppins : 'Poppins',
+              },
+              backgroundImage: (theme) => ({
+                'hero-bg': "linear-gradient(to top, rgba(248, 246, 243,.800),rgba(248, 246, 243,.800)), url('./images/leaf01.png')",
+                
+              }),
+            }
+          }
+        }
+    </script>
+
+</head>
+<body class="font-poppins">
+    
+    <!-- Navbar Section -->
+    <section class="bg-white sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto py-3 px-6 ">
+
+            <div class="navbar p-0 bg-white">
+                <div class="navbar-start">
+                  <a class=""><img class="w-28" src="./images/logo.svg" alt=""></a>
+                </div>
+
+
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+
+                    <li class="hover:text-primary-color text-base text-primary-color font-medium"><a class="hover:bg-white">Home</a></li>
+                    <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">Everything</a></li>
+                    <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">Groceries</a></li>
+                    <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">About</a></li>
+                    <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">Contact</a></li>
+                    
+                  </ul>
+                </div>
+
+
+                <div class="navbar-end">
+
+                    <div class="dropdown dropdown-end mr-4">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                          <div class="indicator">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-5 w-5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor">
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="badge badge-sm indicator-item">8</span>
+                          </div>
+                        </div>
+                        <div
+                          tabindex="0"
+                          class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+                          <div class="card-body">
+                            <span class="text-lg font-bold">8 Items</span>
+                            <span class="text-info">Subtotal: $999</span>
+                            <div class="card-actions">
+                              <button class="btn btn-primary btn-block">View cart</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="avatar hidden lg:block">
+                        <div class="w-10 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
+                    </div>
+
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden rounded-full bg-gray-50">
+                            <i class="fa-solid fa-bars text-lg"></i>
+                        </div>
+                        <ul
+                          tabindex="0"
+                          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                          <li class="hover:text-primary-color text-base text-primary-color font-medium"><a class="hover:bg-white">Home</a></li>
+                          <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">Everything</a></li>
+                          <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">Groceries</a></li>
+                          <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">About</a></li>
+                          <li class="hover:text-primary-color text-base text-gray-600 font-medium"><a class="hover:bg-white ">Contact</a></li>
+                        </ul>
+                      </div>
+                      
+
+                </div>
+              </div>
+
+        </nav>
+    </section>
+
+
+    <!-- Hero Section -->
+    <section class="bg-hero-bg bg-no-repeat bg-right-bottom">
+
+        <header class="max-w-7xl mx-auto px-6 lg:py-28 md:py-20 py-12 flex gap-5 items-center flex-col md:flex-row">
+
+            <div class="flex-1">
+                <img class="w-full" src="./images/bannerbg.png" alt="" srcset="">
+            </div>
+
+            <div class="flex-1 space-y-4 text-center md:text-start">
+                <p class="font-semibold lg:text-base text-sm text-gray-600">Best Quality Products</p>
+                <h1 class="font-bold lg:text-6xl text-4xl leading-tight lg:leading-tight">Join The Organic Movement!</h1>
+                <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus natus eos illum et tenetur tempore eum.</p>
+                <div>
+                    <button class="btn bg-primary-color text-white hover:bg-primary-light px-6 rounded"><i class="fa-solid fa-cart-shopping"></i>Shop Now</button>
+                </div>
+            </div>
+
+        </header>
+
+    </section>
+
+
+    <!-- Featured Brand Section -->
+    <section class="max-w-7xl mx-auto py-14 px-6 flex items-center gap-4 justify-center flex-wrap">
+        <div>
+            <h1 class="text-2xl font-semibold">Featured Brands:</h1>
+        </div>
+
+        <div class="flex flex-wrap gap-4 justify-center">
+
+            <div class="">
+                <img class="w-44" src="./images/logo-1.svg" alt="">
+            </div>
+            <div class="">
+                <img class="w-44" src="./images/logo-2.svg" alt="">
+            </div>
+            <div>
+                <img class="w-44" src="./images/logo-3.svg" alt="">
+            </div>
+            <div>
+                <img class="w-44" src="./images/logo-4.svg" alt="">
+            </div>
+            <div>
+                <img class="w-44" src="./images/logo-5.svg" alt="">
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-bg-color">
+        <section class="max-w-7xl mx-auto px-6 py-20 flex gap-10 md:gap-5 items-center flex-col md:flex-row">
+
+            <div class="flex-1 text-center md:text-start">
+                <h5 class="text-lg font-semibold mb-3">About Us</h5>
+                <h1 class="md:text-5xl text-4xl font-bold ">Nourishing You, Naturally</h1>
+                <p class="text-gray-600 text-sm mt-5 text-justify">At Organic Store, we're passionate about bringing you the purest, most wholesome organic foods straight from nature's bounty. Our journey began with a simple belief: that food should be as natural and unprocessed as possible, offering you the full richness of flavor and nutrients just as nature intended. We partner with sustainable farms that prioritize environmental stewardship, ensuring that every product we offer is not only good for you but also for the planet. Join us in celebrating the joy of eating clean, healthy, and delicious food that nurtures your body and soul.</p>
+    
+                <div>
+                    <button class="btn bg-primary-color text-white hover:bg-primary-light px-6 rounded mt-6">Read More</button>
+                </div>
+    
+            </div>
+    
+            <div class="flex-1">
+                <img class="w-full h-[420px] object-cover rounded-lg" src="./images/about.jpg" alt="">
+            </div>
+    
+        </section>
+    
+    </section>
+    
+    <!-- Get In Touch -->
+    <div class="hero h-[420px]" style="background-image: url('./images/call.jpg');">
+        <div class="hero-overlay bg-opacity-20"></div>
+        <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-7xl mx-auto px-6">
+            <h1 class="mb-5 md:text-5xl text-4xl font-bold">Insert A Call To Action</h1>
+            <p class="mb-5 max-w-4xl text-sm md:text-base">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button class="btn btn-outline text-white rounded">Get In Touch</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="bg-bg-color">
+
+        <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+
+            <img class="w-16 mx-auto" src="./images/leaf01.png" alt="">
+            <h1 class="text-4xl font-bold">Best Selling Products</h1>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10">
+
+                <!-- item -->
+                <div class="card bg-white w-full rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product01.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product02.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full  rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product03.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product04.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product05.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product06.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product07.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- item -->
+                <div class="card bg-white w-full  rounded p-4">
+                    <figure class="">
+                      <img
+                        src="./images/product08.jpg"
+                        alt=""
+                        class="rounded-xl w-full h-64 sm:h-52 object-cover" />
+                    </figure>
+                    <div class="items-center text-center space-y-2">
+                      <p class="text-gray-400 mt-3">Groceries</p>
+                      <h2 class="font-semibold text-xl">Assorted Coffee</h2>
+                      <p class="text-sm text-gray-500">If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <button class="btn bg-primary-color text-white hover:bg-primary-light rounded mt-2 w-full">Read More <i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    </div>
+                </div>
+
+
+
+        </section>
+
+    </section>
+    
+    <!-- Services Section -->
+    <section class="bg-white">
+
+        <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+            <!-- Item -->
+            <div class="p-7 bg-bg-color text-black rounded">
+                <i class="fa-solid fa-truck-fast text-3xl text-primary-light"></i>
+                <h4 class="mt-4 mb-1 font-semibold text-xl">Free Shipping</h4>
+                <p class="text-gray-500 text-sm">Above $5 Only</p>
+            </div>
+
+            <!-- Item -->
+            <div class="p-7 bg-bg-color text-black rounded">
+                <i class="fa-solid fa-certificate text-3xl text-primary-light"></i>
+                <h4 class="mt-4 mb-1 font-semibold text-xl">Certified Organic</h4>
+                <p class="text-gray-500 text-sm">100% Organic</p>
+            </div>
+
+            <!-- Item -->
+            <div class="p-7 bg-bg-color text-black rounded">
+                <i class="fa-solid fa-piggy-bank text-3xl text-primary-light"></i>
+                <h4 class="mt-4 mb-1 font-semibold text-xl">Huge Savings</h4>
+                <p class="text-gray-500 text-sm">At Lowest Price</p>
+            </div>
+
+            <!-- Item -->
+            <div class="p-7 bg-bg-color text-black rounded">
+                <i class="fa-solid fa-recycle text-3xl text-primary-light"></i>
+                <h4 class="mt-4 mb-1 font-semibold text-xl">Easy Returns</h4>
+                <p class="text-gray-500 text-sm">No Questions Asked</p>
+            </div>
+
+        </section>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black">
+
+        <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-5 gap-10 text-white">
+
+            <div>
+                <img class="max-w-48" src="./images/logo-white.png" alt="">
+                <p class="text-white text-sm mt-3">Providing Organic Food since 1992</p>
+            </div>
+
+            <div class="list-none">
+                <h4 class="font-semibold text-lg">Service</h4>
+                <li class="text-sm text-gray-300 mt-4">Branding</li>
+                <li class="text-sm text-gray-300 mt-3">Design</li>
+                <li class="text-sm text-gray-300 mt-3">marketing</li>
+                <li class="text-sm text-gray-300 mt-3">Advertisement</li>
+            </div>
+
+            <div class="list-none">
+                <h4 class="font-semibold text-lg">Company</h4>
+                <li class="text-sm text-gray-300 mt-4">About Us</li>
+                <li class="text-sm text-gray-300 mt-3">Contact</li>
+                <li class="text-sm text-gray-300 mt-3">Jobs</li>
+                <li class="text-sm text-gray-300 mt-3">Press Kit</li>
+            </div>
+
+            <div class="list-none">
+                <h4 class="font-semibold text-lg">Service</h4>
+                <li class="text-sm text-gray-300 mt-4">Terms of use</li>
+                <li class="text-sm text-gray-300 mt-3">Privacy Policy</li>
+                <li class="text-sm text-gray-300 mt-3">Cooke Policy</li>
+            </div>
+
+        </section>
+
+    </footer>
+
+</body>
+</html>
